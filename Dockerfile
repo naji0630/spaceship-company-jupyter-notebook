@@ -5,7 +5,7 @@ FROM jupyter/scipy-notebook
 USER root
 
 # Install additional packages
-RUN pip install --no-cache-dir scikit-learn xgboost lightgbm catboost mlflow optuna
+RUN pip install --no-cache-dir scikit-learn xgboost lightgbm catboost mlflow optuna wandb
 
 # Copy specific data into the image
 # Ensure there is a 'data/' folder in the same directory as this Dockerfile
