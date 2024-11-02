@@ -1,5 +1,5 @@
 # Use jupyter/scipy-notebook as the base image
-FROM gcr.io/kaggle-gpu-images/python
+FROM jupyter/scipy-notebook
 
 # Switch to root user
 USER root
