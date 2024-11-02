@@ -8,14 +8,8 @@ USER root
 RUN pip install --no-cache-dir scikit-learn xgboost lightgbm catboost mlflow optuna
 
 # Copy specific data into the image
+# Ensure there is a 'data/' folder in the same directory as this Dockerfile
 COPY data /home/jovyan/data
-
-# Copy the start.sh script into the image
-COPY start.sh /usr/local/bin/start.sh
-RUN chmod +x /usr/local/bin/start.sh
 
 # Revert back to the jovyan user
 USER $NB_UID
-
-# Set the entrypoint to start.sh
-ENTRYPOINT ["/usr/local/bin/start.sh"]
