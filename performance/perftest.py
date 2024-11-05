@@ -30,7 +30,7 @@ if __name__ == "__main__":
     api_url = "http://192.168.0.149:8000/predict-gender"
 
     body = {
-        "name": "Alice"
+        "name": "Machinelearingengineer"
     }
 
     requests_per_second = 10
