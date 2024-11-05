@@ -34,7 +34,7 @@ def predict_gender_probability(name: str) -> float:
         padded_sequence = pad_sequences(sequence, maxlen=max_sequence_length, padding='post')
         padded_sequence = padded_sequence.astype(np.float32)
         probability = model.predict(padded_sequence)[0][0]
-    return probability
+    return float(probability)
 
 # 요청 모델
 class NameRequest(BaseModel):
