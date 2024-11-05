@@ -8,6 +8,6 @@ spec:
     app: fastapi-gender-prediction
   ports:
     - protocol: TCP
-      port: 8000  # 컨테이너에서 노출하는 포트
+      port: 8000
       targetPort: 8000
-      nodePort: 30007  # NodePort를 통해 외부에서 접근할 포트
+      nodePort: 30007
