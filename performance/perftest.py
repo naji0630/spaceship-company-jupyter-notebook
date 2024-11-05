@@ -27,7 +27,7 @@ async def performance_test(api_url, requests_per_second, duration, body):
         logging.info(f"Completed {len(responses)} requests.")
 
 if __name__ == "__main__":
-    api_url = "http://192.168.0.149:8000/predict-gender"
+    api_url = "http://192.168.49.2:30007/predict-gender"
 
     body = {
         "name": "Machinelearingengineer"

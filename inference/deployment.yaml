@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-gender-prediction-deployment
+spec:
+  replicas: 10  # Pod 개수를 설정합니다.
+  selector:
+    matchLabels:
+      app: fastapi-gender-prediction
+  template:
+    metadata:
+      labels:
+        app: fastapi-gender-prediction
+    spec:
+      containers:
+      - name: fastapi-gender-prediction-container
+        image: naji0630/fastapi-gender-prediction:latest  # 이미지 이름과 태그를 설정합니다.
+        ports:
+        - containerPort: 8000
